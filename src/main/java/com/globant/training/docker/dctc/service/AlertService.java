@@ -22,7 +22,10 @@ public class AlertService {
         log.info("Validating if user exists on database {}", alertRequest.getUserId());
 
         ApplicationUser user = userRepository.findById(alertRequest.getUserId())
-                .orElseThrow(() -> new IllegalArgumentException("User was not found"));
+                .orElseThrow(() -> {
+                    log.warn("User does not exists on DB");
+                    return new IllegalArgumentException("User was not found");
+                });
 
         log.info("User found sending alert through kafka");
 
