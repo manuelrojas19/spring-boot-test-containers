@@ -91,4 +91,4 @@ This application use [Test Containers](https://testcontainers.com/) in order to 
 ```sh
 mvn clean test
 ```
-In case you are using Colima for Mac and you see the following exception "Could not find a valid Docker environment", may you need to execute those (additional steps)[https://www.rockyourcode.com/testcontainers-with-colima/]
+In case you are using Colima for Mac and you see the following exception "Could not find a valid Docker environment", may you need to execute those [additional steps](https://www.rockyourcode.com/testcontainers-with-colima/)
