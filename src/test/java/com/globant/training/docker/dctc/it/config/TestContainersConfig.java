@@ -34,7 +34,6 @@ public class TestContainersConfig {
     @Container
     public static final KafkaContainer kafkaContainer = new KafkaContainer("apache/kafka-native:3.8.0");
 
-
     @BeforeAll
     static void beforeAll() {
         postgreSQLContainer.start();
